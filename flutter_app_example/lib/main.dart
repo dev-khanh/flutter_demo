@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterappexample/screen.dart';
 import 'package:toast/toast.dart';
 
+import 'Animation/calculator_animation.dart';
 import 'BottomNavigationBar/bottomnavigationbars.dart';
 import 'LifeCycle/lifecyle_handling_orientation.dart';
 import 'Redux/MainRedux.dart';
@@ -22,7 +23,7 @@ void main() => runApp(MaterialApp(title: 'Navigation Basics', home: MyApp(),));
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Collapsing_Toolbar();
+    return Calculator_Animation();
   }
 }
 //SHOW HIDE SETSTATE STATE
