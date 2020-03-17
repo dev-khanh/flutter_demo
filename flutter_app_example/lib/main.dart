@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutterappexample/screen.dart';
 import 'package:toast/toast.dart';
 
+import 'BottomNavigationBar/bottomnavigationbars.dart';
+import 'Redux/MainRedux.dart';
 import 'navigation/ExtractArgumentsScreen.dart';
 import 'navigation/HomeScreen.dart';
 
@@ -15,7 +17,12 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 void main() => runApp(MaterialApp(title: 'Navigation Basics', home: MyApp(),));
-
+class MyApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return MainRedux();
+  }
+}
 //SHOW HIDE SETSTATE STATE
 //class MyApp extends StatelessWidget{
 //  @override
@@ -429,48 +436,15 @@ void main() => runApp(MaterialApp(title: 'Navigation Basics', home: MyApp(),));
 
 
 
-//class Photo{
-//  final int albumId, id;
-//  final String title, url, thumbnailUrl;
-//  Photo({this.albumId, this.id, this.title, this.url, this.thumbnailUrl});
-//  factory Photo.fromJSON(Map<String, dynamic> json) {
-//    return Photo(albumId: json['albumId'], id: json['id'], title: json['title'], url: json['url'], thumbnailUrl: json['thumbnailUrl']);
-//  }
-//}
-//Future<List<Photo>> fetchPhotos(http.Client client) async{
-//  return compute( parsePhotos, (await client.get('https://jsonplaceholder.typicode.com/photos')).body);
-//}
-//List<Photo> parsePhotos(String responseData){
-//  return jsonDecode(responseData).map<Photo>((json) => Photo.fromJSON(json)).toList();
-//}
-//class MyApp extends StatelessWidget{
-//  @override
-//  Widget build(BuildContext context) {
-//    return Scaffold(
-//      appBar: AppBar(title: Text('HOME')),
-//      body: FutureBuilder<List<Photo>>(
-//        future: fetchPhotos(http.Client()),
-//        builder: (context, responData){
-//          if(responData.hasError) print(responData.error);
-//          return responData.hasData ? PhotosList(responData.data) : Center(child: CircularProgressIndicator());
-//        }
-//      )
-//    );
-//  }
-//}
-//class PhotosList extends StatelessWidget{
-//  final List<Photo> mPhotos;
-//  PhotosList(this.mPhotos);
-//  @override
-//  Widget build(BuildContext context) {
-//    return GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2), itemBuilder: (context, index){
-//      return Image.network(mPhotos[index].thumbnailUrl);
-//    });
-//  }
-//}
 
-String url = 'https://jsonplaceholder.typicode.com/photos';
-String url1 = 'https://jsonplaceholder.typicode.com/albums/1';
+
+
+
+
+
+//JSON OBJECT
+//String url = 'https://jsonplaceholder.typicode.com/photos';
+//String url1 = 'https://jsonplaceholder.typicode.com/albums/1';
 //class DoiTuong{
 //  final int albumId, id;
 //  final String title, url, thumbnailUrl;
@@ -479,17 +453,7 @@ String url1 = 'https://jsonplaceholder.typicode.com/albums/1';
 //    return DoiTuong(albumId: json['albumId'], id: json['id'], title: json['title'], url: json['url'], thumbnailUrl: json['thumbnailUrl']);
 //  }
 //}
-class DoiTuong1{
-  final int userId, id;
-  final String title;
-  DoiTuong1({this.userId, this.id, this.title});
-  factory DoiTuong1.fromJSONFromMaps(Map<String, dynamic> json){
-    return DoiTuong1(userId: json['userId'], id: json['id'], title: json['title']);
-  }
-}
-Future<DoiTuong1> fetchDoiTuong1() async {
-    return DoiTuong1.fromJSONFromMaps(json.decode((await http.get(url1)).body));
-}
+
 
 //Future<List<DoiTuong>> fetchDoiTuong(http.Client client) async{
 //  return compute(getDataDoiTuong , (await client.get(url)).body);
@@ -522,28 +486,41 @@ Future<DoiTuong1> fetchDoiTuong1() async {
 //    });
 //  }
 //}
+// JSON two
+//class DoiTuong1{
+//  final int userId, id;
+//  final String title;
+//  DoiTuong1({this.userId, this.id, this.title});
+//  factory DoiTuong1.fromJSONFromMaps(Map<String, dynamic> json){
+//    return DoiTuong1(userId: json['userId'], id: json['id'], title: json['title']);
+//  }
+//}
+//Future<DoiTuong1> fetchDoiTuong1() async {
+//  return DoiTuong1.fromJSONFromMaps(json.decode((await http.get(url1)).body));
+//}
+//class MyApp extends StatelessWidget{
+//  @override
+//  Widget build(BuildContext context) {
+//    return Scaffold(
+//      appBar: AppBar(title: Text('sss')),
+//      body: FutureBuilder<DoiTuong1>(
+//        future: fetchDoiTuong1(),
+//        builder: (context, jsonGetData){
+//          return jsonGetData.hasData ? fuctionShowListItem(jsonGetData.data.title) : Center(child: CircularProgressIndicator());
+//        },
+//      ),
+//    );
+//  }
+//}
+//class fuctionShowListItem extends StatelessWidget{
+//  String title;
+//  fuctionShowListItem(this.title);
+//  @override
+//  Widget build(BuildContext context) {
+//    return Text(title);
+//  }
+//}
 
 
 
-class MyApp extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('sss')),
-      body: FutureBuilder<DoiTuong1>(
-        future: fetchDoiTuong1(),
-        builder: (context, jsonGetData){
-          return jsonGetData.hasData ? fuctionShowListItem(jsonGetData.data.title) : Center(child: CircularProgressIndicator());
-        },
-      ),
-    );
-  }
-}
-class fuctionShowListItem extends StatelessWidget{
-  String title;
-  fuctionShowListItem(this.title);
-  @override
-  Widget build(BuildContext context) {
-    return Text(title);
-  }
-}
+
