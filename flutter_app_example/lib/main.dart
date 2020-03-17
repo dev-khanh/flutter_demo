@@ -5,7 +5,9 @@ import 'package:flutterappexample/screen.dart';
 import 'package:toast/toast.dart';
 
 import 'BottomNavigationBar/bottomnavigationbars.dart';
+import 'LifeCycle/lifecyle_handling_orientation.dart';
 import 'Redux/MainRedux.dart';
+import 'SliverAppBar/collapsing_toolbar.dart';
 import 'navigation/ExtractArgumentsScreen.dart';
 import 'navigation/HomeScreen.dart';
 
@@ -20,7 +22,7 @@ void main() => runApp(MaterialApp(title: 'Navigation Basics', home: MyApp(),));
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return MainRedux();
+    return Collapsing_Toolbar();
   }
 }
 //SHOW HIDE SETSTATE STATE
