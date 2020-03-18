@@ -7,7 +7,11 @@ import 'package:toast/toast.dart';
 import 'Animation/calculator_animation.dart';
 import 'BottomNavigationBar/bottomnavigationbars.dart';
 import 'LifeCycle/lifecyle_handling_orientation.dart';
+import 'LocalStorage/local_storage.dart';
+import 'Login/lo_gin.dart';
 import 'Redux/MainRedux.dart';
+import 'Redux/redux-simple.dart';
+import 'SharedPreferences/shared_preferences.dart';
 import 'SliverAppBar/collapsing_toolbar.dart';
 import 'navigation/ExtractArgumentsScreen.dart';
 import 'navigation/HomeScreen.dart';
@@ -23,7 +27,7 @@ void main() => runApp(MaterialApp(title: 'Navigation Basics', home: MyApp(),));
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Calculator_Animation();
+    return Login();
   }
 }
 //SHOW HIDE SETSTATE STATE
