@@ -3,24 +3,22 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterappexample/screen.dart';
 import 'package:toast/toast.dart';
-
 import 'Animation/calculator_animation.dart';
 import 'BottomNavigationBar/bottomnavigationbars.dart';
 import 'LifeCycle/lifecyle_handling_orientation.dart';
 import 'LocalStorage/local_storage.dart';
 import 'LocalStorage/login_local.dart';
-import 'Login/lo_gin.dart';
+import 'Login/home.dart';
+import 'Login/lo_gins.dart';
+import 'Login/main_creen.dart';
 import 'Redux/MainRedux.dart';
 import 'Redux/redux-simple.dart';
 import 'SharedPreferences/shared_preferences.dart';
 import 'SliverAppBar/collapsing_toolbar.dart';
 import 'navigation/ExtractArgumentsScreen.dart';
 import 'navigation/HomeScreen.dart';
-
-
 import 'dart:async';
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -28,7 +26,7 @@ void main() => runApp(MaterialApp(title: 'Navigation Basics', home: MyApp(),));
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Login_Local();
+    return MainScreens();
   }
 }
 //SHOW HIDE SETSTATE STATE
