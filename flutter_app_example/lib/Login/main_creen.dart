@@ -18,7 +18,6 @@ class _setStateMyApp extends State<MainScreens>{
   @override
   Widget build(BuildContext context) {
     print('DEVK: ${_email}');
-
     return Scaffold(body: _email == null ? Login() : Home());
   }
   init() async {

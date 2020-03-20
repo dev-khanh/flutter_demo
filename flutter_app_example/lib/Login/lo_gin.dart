@@ -10,14 +10,24 @@ class Login extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 class _MyHomePageState extends State<Login> {
+  TextEditingController _textFieldControllerName = TextEditingController();
+  TextEditingController _textFieldControllerPass = TextEditingController();
+
+  final FocusNode _ageFocus = FocusNode();
+  final FocusNode _heightFocus = FocusNode();
+  _fieldFocusChange(BuildContext context, FocusNode currentFocus,FocusNode nextFocus) {
+    FocusScope.of(context).requestFocus(nextFocus);
+  }
+
+  bool check = true;
   final User user =  new User();
   TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
   @override
   Widget build(BuildContext context) {
-    final emailField = TextField(obscureText: false, style: style, autocorrect: false, onChanged: (name){this.user._userName = name;},
+    final emailField = TextField(focusNode: _ageFocus, textInputAction: TextInputAction.next, controller: _textFieldControllerName, obscureText: false, style: style, autocorrect: false, onSubmitted: (name){_fieldFocusChange(context, _ageFocus, _heightFocus);}, onChanged: (name){this.user._userName = name;  },
       decoration: InputDecoration(contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0), hintText: "Email", border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
     );
-    final passwordField = TextField(obscureText: true, style: style, autocorrect: false, onChanged: (pass){this.user._passWord = pass;},
+    final passwordField = TextField(focusNode: _heightFocus, controller: _textFieldControllerPass, obscureText: check, style: style, autocorrect: false, onChanged: (pass){this.user._passWord = pass; },
       decoration: InputDecoration(contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0), hintText: "Password", border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
     );
     final loginButon = Material(elevation: 5.0, borderRadius: BorderRadius.circular(30.0), color: Color(0xff01A0C7),
@@ -54,12 +64,20 @@ class _MyHomePageState extends State<Login> {
     );
   }
   _setOnClickLogin(BuildContext context){
-    if(this.user._userName != '' && this.user._passWord != ''){
-      if(this.user._userName == 'admin' && this.user._passWord == '123456'){
+    if(this.user._userName != null && this.user._passWord != null){
+      if((this.user._userName == "admin") && (this.user._passWord == "0032495")){
         print('DEVK Name: ${this.user._userName}    -   ${this.user._passWord}');
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Home())).then((value) {
+          setState(() {
+            _textFieldControllerName.text = "";
+            _textFieldControllerPass.text = "";
+            this.user._userName = "";
+            this.user._passWord = "";
+          });
+        });
       }else{
-        Toast.show("Login unsuccessful !!! ", context, duration: Toast.LENGTH_SHORT, gravity:  Toast.BOTTOM);
+        print('DEVK Name: ${this.user._userName}    -   ${this.user._passWord}');
+        Toast.show("Login unsuccessful !!! ", context, duration: Toast.LENGTH_SHORT, gravity: Toast.BOTTOM);
       }
     }else{
       Toast.show("Please enter a password and usernam !!!", context, duration: Toast.LENGTH_SHORT, gravity:  Toast.BOTTOM);
