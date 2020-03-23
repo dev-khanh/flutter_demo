@@ -55,11 +55,12 @@ class _MyHomePageState extends State<Login> {
         ),
       )
     );
-    return SingleChildScrollView(
-      child: Column(mainAxisSize: MainAxisSize.min, mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: <Widget>[
-          _mContainer,
-        ],
+    return Scaffold(body: SingleChildScrollView(
+        child: Column(mainAxisSize: MainAxisSize.min, mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            _mContainer,
+          ],
+        ),
       ),
     );
   }

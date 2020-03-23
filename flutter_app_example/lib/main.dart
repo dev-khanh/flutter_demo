@@ -5,6 +5,8 @@ import 'package:flutterappexample/screen.dart';
 import 'package:toast/toast.dart';
 import 'Animation/calculator_animation.dart';
 import 'BottomNavigationBar/bottomnavigationbars.dart';
+import 'Conect_Java/conect_java.dart';
+import 'Dialog/custom_dialog.dart';
 import 'LifeCycle/lifecyle_handling_orientation.dart';
 import 'LocalStorage/local_storage.dart';
 import 'LocalStorage/login_local.dart';
@@ -25,7 +27,7 @@ void main() => runApp(MaterialApp(title: 'Navigation Basics', home: MyApp(),));
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return MainScreens();
+    return Conect_Java();
   }
 }
 //SHOW HIDE SETSTATE STATE
