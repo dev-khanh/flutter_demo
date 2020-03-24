@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterappexample/screen.dart';
+import 'package:flutterappexample/slider_button/slider_button.dart';
 import 'package:toast/toast.dart';
 import 'Animation/calculator_animation.dart';
 import 'BottomNavigationBar/bottomnavigationbars.dart';
@@ -27,7 +28,7 @@ void main() => runApp(MaterialApp(title: 'Navigation Basics', home: MyApp(),));
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Conect_Java();
+    return Slider_Button();
   }
 }
 //SHOW HIDE SETSTATE STATE

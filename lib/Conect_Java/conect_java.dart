@@ -13,6 +13,7 @@ class PlatformChannel extends StatefulWidget {
 }
 class _PlatformChannelState extends State<PlatformChannel> {
   static const MethodChannel methodChannel = MethodChannel('samples.flutter.io/battery');
+  static const MethodChannel devk = MethodChannel('com.example.flutterappexample/devk');
   String _batteryLevel = 'No Data';
 
   @override
@@ -27,7 +28,7 @@ class _PlatformChannelState extends State<PlatformChannel> {
               Text(_batteryLevel, key: const Key('Battery level label')),
               Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: RaisedButton(child: const Text('Refresh'), onPressed: _getBatteryLevel),
+                child: RaisedButton(child: const Text('Refresh'), onPressed: ()=> devk.invokeMethod('senData')),
               ),
             ],
           ),
