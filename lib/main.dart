@@ -32,7 +32,7 @@ void main() => runApp(MaterialApp(title: 'Navigation Basics', home: MyApp(),));
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return MovieDetailPage();
+    return Custom_Dialog();
   }
 }
 //SHOW HIDE SETSTATE STATE
