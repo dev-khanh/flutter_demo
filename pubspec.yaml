@@ -34,6 +34,13 @@ dependencies:
   localstorage: ^3.0.1+4
   swipe_button: ^0.0.2
 
+#  rxJava
+  rxdart: ^0.21.0
+#  slider
+  carousel_slider: ^1.3.0
+  flutter_rating: ^0.0.2
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
