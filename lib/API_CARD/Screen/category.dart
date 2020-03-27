@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../model/item_model.dart';
+import '../model/itemmodel.dart';
 import '../movies_list_bloc.dart';
 
 class MovieCategory extends StatefulWidget {

@@ -1,5 +1,5 @@
-import 'package:exampledemomovie/ui/Widget/movie_list.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterappexample/demo/ui/Widget/movie_list.dart';
 
 import '../house.dart';
 

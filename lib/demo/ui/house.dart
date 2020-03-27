@@ -1,13 +1,13 @@
-import 'package:exampledemomovie/Api_RxJava/movies_detail_bloc.dart';
-import 'package:exampledemomovie/model/genre_model.dart';
-import 'package:exampledemomovie/model/movie_detail_model.dart';
-import 'package:exampledemomovie/model/production_country_model.dart';
-import 'package:exampledemomovie/ui/my_scroll_behavior.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_rating/flutter_rating.dart';
+import 'package:flutterappexample/demo/Api_RxJava/movies_detail_bloc.dart';
+import 'package:flutterappexample/demo/model/genre_model.dart';
+import 'package:flutterappexample/demo/model/movie_detail_model.dart';
+import 'package:flutterappexample/demo/model/production_country_model.dart';
 
 import 'Widget/movie_gallery.dart';
+import 'my_scroll_behavior.dart';
 
 class House extends StatefulWidget{
   House({Key key, this.movieId}) : super(key: key);
@@ -42,7 +42,7 @@ class _MovieDetailPageState extends State<House>{
       child: SingleChildScrollView(
         child: StreamBuilder(
           stream: movieDetailBloc.movieDetail,
-          builder: (context, AsyncSnapshot<MovieDetailModel> snapshot) {
+          builder: (context, AsyncSnapshot<Movie_Detail_Model> snapshot) {
             if (snapshot.hasData) {
               return buildContent(snapshot, context);
             } else if (snapshot.hasError) {
@@ -54,7 +54,7 @@ class _MovieDetailPageState extends State<House>{
       )
     );
   }
-  Widget buildContent(AsyncSnapshot<MovieDetailModel> snapshot, BuildContext context) {
+  Widget buildContent(AsyncSnapshot<Movie_Detail_Model> snapshot, BuildContext context) {
     print('DEVK 8: '+ snapshot.data.backdrop_path.toString());
     return Container(
       child: Column(

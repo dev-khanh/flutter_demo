@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' show Client;
-import 'model/item_model.dart';
-import 'model/movie_detail_model.dart';
+import 'model/itemmodel.dart';
+import 'model/moviedetailmodel.dart';
 import 'model/movie_image_model.dart';
 class MovieApiProvider {
   Client client = Client();

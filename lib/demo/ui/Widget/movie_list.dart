@@ -1,6 +1,6 @@
-import 'package:exampledemomovie/Api_RxJava/movies_list_bloc.dart';
-import 'package:exampledemomovie/model/item_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterappexample/demo/Api_RxJava/movies_list_bloc.dart';
+import 'package:flutterappexample/demo/model/item_model.dart';
 class MovieListView extends StatefulWidget {
   final String type;
   final Function(int movieId) onItemInteraction;

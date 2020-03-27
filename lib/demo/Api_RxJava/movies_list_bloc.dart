@@ -1,6 +1,8 @@
-import 'package:exampledemomovie/Api_RxJava/base.dart';
-import 'package:exampledemomovie/model/item_model.dart';
+
+import 'package:flutterappexample/demo/model/item_model.dart';
 import 'package:rxdart/rxdart.dart';
+
+import 'base.dart';
 
 class MovieListBloc extends BaseBloc<Item_Model>{
   Observable<Item_Model> get movieList => fetcher.stream;

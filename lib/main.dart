@@ -21,6 +21,8 @@ import 'Redux/MainRedux.dart';
 import 'Redux/redux-simple.dart';
 import 'SharedPreferences/shared_preferences.dart';
 import 'SliverAppBar/collapsing_toolbar.dart';
+import 'UI_Demo/UI_Tow/demo_ui_two.dart';
+import 'UI_Demo/ui_demo.dart';
 import 'navigation/ExtractArgumentsScreen.dart';
 import 'navigation/HomeScreen.dart';
 import 'dart:async';
@@ -32,7 +34,7 @@ void main() => runApp(MaterialApp(title: 'Navigation Basics', home: MyApp(),));
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Custom_Dialog();
+    return Demo_UI_Two();
   }
 }
 //SHOW HIDE SETSTATE STATE

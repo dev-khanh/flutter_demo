@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:exampledemomovie/Api_RxJava/movies_list_bloc.dart';
-import 'package:exampledemomovie/model/item_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterappexample/demo/Api_RxJava/movies_list_bloc.dart';
+import 'package:flutterappexample/demo/model/item_model.dart';
 class SlideShowView extends StatefulWidget {
   final Function(int movieId) onItemInteraction;
   const SlideShowView({Key key, this.onItemInteraction}) : super(key: key);

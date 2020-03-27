@@ -1,4 +1,4 @@
-import 'package:exampledemomovie/model/base_model.dart';
+import 'base_model.dart';
 
 class Item_Model extends BaseModel{
   int _page;

@@ -1,7 +1,7 @@
 import 'dart:convert';
-import 'package:exampledemomovie/model/item_model.dart';
-import 'package:exampledemomovie/model/movie_detail_model.dart';
-import 'package:exampledemomovie/model/movie_image_model.dart';
+import 'package:flutterappexample/demo/model/item_model.dart';
+import 'package:flutterappexample/demo/model/movie_detail_model.dart';
+import 'package:flutterappexample/demo/model/movie_image_model.dart';
 import 'package:http/http.dart';
 
 class MovieApiProvider{
@@ -17,12 +17,12 @@ class MovieApiProvider{
       throw Exception('Failed to load post');
     }
   }
-  Future<MovieDetailModel> fetchMovieDetail(int movieId) async {
+  Future<Movie_Detail_Model> fetchMovieDetail(int movieId) async {
     final response = await client.get("http://api.themoviedb.org/3/movie/$movieId?api_key=$_apiKey");
     print("DEVK 6: "+response.request.url.toString());
     print("DEVK 7: "+response.body.toString());
     if (response.statusCode == 200) {
-      return MovieDetailModel.fromJson(json.decode(response.body));
+      return Movie_Detail_Model.fromJson(json.decode(response.body));
     } else {
       throw Exception('Failed to load post');
     }

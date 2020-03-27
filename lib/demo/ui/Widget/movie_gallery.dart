@@ -1,6 +1,6 @@
-import 'package:exampledemomovie/Api_RxJava/movies_image_bloc.dart';
-import 'package:exampledemomovie/model/movie_image_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterappexample/demo/Api_RxJava/movies_image_bloc.dart';
+import 'package:flutterappexample/demo/model/movie_image_model.dart';
 class MovieGallery extends StatefulWidget {
   final int movieId;
   MovieGallery({Key key, this.movieId}) : super(key: key);

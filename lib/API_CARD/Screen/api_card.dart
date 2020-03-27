@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-import '../model/item_model.dart';
+import '../model/itemmodel.dart';
 import '../movies_list_bloc.dart';
 
 class Api_Card extends StatelessWidget{

@@ -1,4 +1,4 @@
-import 'package:exampledemomovie/model/movie_image_model.dart';
+import 'package:flutterappexample/demo/model/movie_image_model.dart';
 import 'package:rxdart/rxdart.dart';
 
 import 'base.dart';

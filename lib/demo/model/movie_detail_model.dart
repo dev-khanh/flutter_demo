@@ -5,7 +5,7 @@ import 'production_company_model.dart';
 import 'production_country_model.dart';
 import 'spoken_language.dart';
 
-class MovieDetailModel extends BaseModel {
+class Movie_Detail_Model extends BaseModel {
   bool adult;
   String backdrop_path;
   BelongToCollectionModel belongs_to_collection;
@@ -32,7 +32,7 @@ class MovieDetailModel extends BaseModel {
   double vote_average;
   int vote_count;
 
-  MovieDetailModel.fromJson(Map<String, dynamic> parsedJson) {
+  Movie_Detail_Model.fromJson(Map<String, dynamic> parsedJson) {
 //    print("DEVK 7: "+ parsedJson['adult'].length.toString());
     adult = parsedJson['adult'];
     backdrop_path = parsedJson['backdrop_path'];

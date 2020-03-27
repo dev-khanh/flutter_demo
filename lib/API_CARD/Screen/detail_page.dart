@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating/flutter_rating.dart';
 import 'package:flutterappexample/API_CARD/model/genre_model.dart';
-import 'package:flutterappexample/API_CARD/model/movie_detail_model.dart';
+import 'package:flutterappexample/API_CARD/model/moviedetailmodel.dart';
 import 'package:flutterappexample/API_CARD/model/production_country_model.dart';
 import '../movies_detail_bloc.dart';
 import '../my_scroll_behavior.dart';

@@ -1,6 +1,6 @@
 import 'dart:async';
-import 'model/item_model.dart';
-import 'model/movie_detail_model.dart';
+import 'model/itemmodel.dart';
+import 'model/moviedetailmodel.dart';
 import 'model/movie_image_model.dart';
 import 'movie_api_provider.dart';
 class Repository {

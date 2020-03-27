@@ -1,6 +1,6 @@
 import 'package:rxdart/rxdart.dart';
 import 'base.dart';
-import 'model/movie_detail_model.dart';
+import 'model/moviedetailmodel.dart';
 class MovieDetailBloc extends BaseBloc<MovieDetailModel> {
   Observable<MovieDetailModel> get movieDetail => fetcher.stream;
   fetchMovieDetail(int movieId) async {
