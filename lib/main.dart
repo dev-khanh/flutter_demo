@@ -10,12 +10,14 @@ import 'API_CARD/Screen/movie_category.dart';
 import 'API_CARD/Screen/my_list.dart';
 import 'Animation/calculator_animation.dart';
 import 'BottomNavigationBar/bottomnavigationbars.dart';
+import 'Color/text_color.dart';
 import 'Conect_Java/conect_java.dart';
 import 'Dialog/custom_dialog.dart';
 import 'LifeCycle/lifecyle_handling_orientation.dart';
 import 'LocalStorage/local_storage.dart';
 import 'LocalStorage/login_local.dart';
 import 'Login/home.dart';
+import 'Login/login_challenge.dart';
 import 'Login/main_creen.dart';
 import 'Redux/MainRedux.dart';
 import 'Redux/redux-simple.dart';
@@ -34,7 +36,7 @@ void main() => runApp(MaterialApp(title: 'Navigation Basics', home: MyApp(),));
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Demo_UI_Two();
+    return Text_Color();
   }
 }
 //SHOW HIDE SETSTATE STATE
