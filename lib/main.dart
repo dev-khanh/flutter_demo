@@ -9,9 +9,11 @@ import 'API_CARD/Screen/detail_page.dart';
 import 'API_CARD/Screen/movie_category.dart';
 import 'API_CARD/Screen/my_list.dart';
 import 'Animation/calculator_animation.dart';
+import 'BadgesWidget/badges_widget.dart';
 import 'BottomNavigationBar/bottomnavigationbars.dart';
 import 'Color/text_color.dart';
 import 'Conect_Java/conect_java.dart';
+import 'Desiges/desiges_example.dart';
 import 'Dialog/custom_dialog.dart';
 import 'LifeCycle/lifecyle_handling_orientation.dart';
 import 'LocalStorage/local_storage.dart';
@@ -19,10 +21,12 @@ import 'LocalStorage/login_local.dart';
 import 'Login/home.dart';
 import 'Login/login_challenge.dart';
 import 'Login/main_creen.dart';
+import 'Opacity/opacity_demo.dart';
 import 'Redux/MainRedux.dart';
 import 'Redux/redux-simple.dart';
 import 'SharedPreferences/shared_preferences.dart';
 import 'SliverAppBar/collapsing_toolbar.dart';
+import 'UI_Demo/UI_Ba/main_list.dart';
 import 'UI_Demo/UI_Tow/demo_ui_two.dart';
 import 'UI_Demo/ui_demo.dart';
 import 'navigation/ExtractArgumentsScreen.dart';
@@ -36,7 +40,7 @@ void main() => runApp(MaterialApp(title: 'Navigation Basics', home: MyApp(),));
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Text_Color();
+    return Main_List();
   }
 }
 //SHOW HIDE SETSTATE STATE

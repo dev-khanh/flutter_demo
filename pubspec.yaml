@@ -33,6 +33,9 @@ dependencies:
   path_provider: ^1.6.5
   localstorage: ^3.0.1+4
   swipe_button: ^0.0.2
+  font_awesome_flutter: ^8.5.0
+  intl: ^0.16.0
+  smooth_star_rating: ^1.0.3
 
 #  rxJava
   rxdart: ^0.21.0
@@ -56,6 +59,9 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/
+    - assets/design_course/
+    - assets/fitness_app/
+    - assets/hotel/
   fonts:
     - family: Raleway
       fonts:
