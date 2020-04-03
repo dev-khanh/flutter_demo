@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterappexample/Desiges/new_sceen_get_data.dart';
 import 'package:flutterappexample/screen.dart';
 import 'package:flutterappexample/slider_button/slider_button.dart';
 import 'package:toast/toast.dart';
@@ -14,10 +15,12 @@ import 'BottomNavigationBar/bottomnavigationbars.dart';
 import 'Color/text_color.dart';
 import 'Conect_Java/conect_java.dart';
 import 'Desiges/desiges_example.dart';
+import 'Desiges/test_send_image.dart';
 import 'Dialog/custom_dialog.dart';
 import 'LifeCycle/lifecyle_handling_orientation.dart';
 import 'LocalStorage/local_storage.dart';
 import 'LocalStorage/login_local.dart';
+import 'LocalStorage/screen_one.dart';
 import 'Login/home.dart';
 import 'Login/login_challenge.dart';
 import 'Login/main_creen.dart';
@@ -30,6 +33,11 @@ import 'UI_Demo/UI_Ba/main_list.dart';
 import 'UI_Demo/UI_Bon/fitness_app_home_screen.dart';
 import 'UI_Demo/UI_Tow/demo_ui_two.dart';
 import 'UI_Demo/ui_demo.dart';
+import 'Ui_Demo_example/App_Ui_Two/calll_ainition_training.dart';
+import 'Ui_Demo_example/App_Ui_Two/training_screen.dart';
+import 'Ui_Demo_example/App_Ui_one/calll_ainition.dart';
+import 'Ui_Demo_example/App_Ui_one/my_diary_screen.dart';
+import 'Ui_Demo_example/App_Ui_one/text/StackPosition.dart';
 import 'navigation/ExtractArgumentsScreen.dart';
 import 'navigation/HomeScreen.dart';
 import 'dart:async';
@@ -41,7 +49,7 @@ void main() => runApp(MaterialApp(title: 'Navigation Basics', home: MyApp(),));
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return FitnessAppHomeScreen();
+    return TestSendImage();
   }
 }
 //SHOW HIDE SETSTATE STATE

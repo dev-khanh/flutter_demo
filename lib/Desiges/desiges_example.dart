@@ -4,22 +4,7 @@ class Desiges_example extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(
-          children: <Widget>[
-            Expanded(
-              child: _BoderRadisuccssss2(context),
-              flex: 1
-            ),
-            Expanded(
-              child: _BoderRadisuccssss(context),
-              flex: 2,
-            ),
-            Expanded(
-              child: _BoderRadisuccssss1(context),
-              flex: 7,
-            )
-          ],
-        )
+        body: MyHomePage()
     );
   }
   Widget _BoderRadisuccssss2(BuildContext context){
@@ -375,17 +360,104 @@ class _CanDieuFullScreenCenter extends StatelessWidget{
               fit: StackFit.expand,
               children: <Widget>[
                 Material(color: Colors.yellowAccent),
-                Positioned(
-                  top: 0,
-                  child: Icon(Icons.star, size: 50),
-                ),
-                Positioned(
-                  top: constraints.maxHeight - iconSize,
-                  left: constraints.maxWidth - iconSize,
+                Positioned(top: 0, child: Icon(Icons.star, size: 50)),
+                Positioned(top: constraints.maxHeight - iconSize, left: constraints.maxWidth - iconSize,
                   child: Icon(Icons.call, size: 50),
                 ),
+                Positioned(child: Icon(Icons.clear, size: 50,), top: 0, right: 0,),
+                Positioned(child: Icon(Icons.done, size: 50,), top: constraints.maxHeight - iconSize,)
               ],
             ),
+      ),
+    );
+  }
+}
+class _PositionIcon extends StatelessWidget{
+  var iconSize = 50;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Position')),
+      body: Column(
+        children: <Widget>[
+          Expanded(
+            child: Container(decoration: BoxDecoration(color: Colors.red),),
+            flex: 1,
+          ),
+          Expanded(
+            child: LayoutBuilder(
+              builder: (context, constraints) =>
+                  Stack(
+                    fit: StackFit.expand,
+                    children: <Widget>[
+                      Material(color: Colors.yellowAccent),
+                      Positioned(top: -20, child: Icon(Icons.star, size: 50)),
+                      Positioned(top: constraints.maxHeight - iconSize, left: constraints.maxWidth - iconSize,
+                        child: Icon(Icons.call, size: 50),
+                      ),
+                      Positioned(child: Icon(Icons.clear, size: 50,), top: 0, right: 0,),
+                      Positioned(child: Icon(Icons.done, size: 50,), top: constraints.maxHeight - iconSize,)
+                    ],
+                  ),
+            ),
+            flex: 1,
+          ),
+        ],
+      )
+    );
+  }
+}
+
+
+
+class MyHomePage1 extends StatelessWidget {
+  final double topWidgetHeight = 200.0;
+  final double avatarRadius = 50.0;
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      body: new Stack(
+        children: <Widget>[
+          new Column(
+            children: <Widget>[
+              Expanded(child: Container(decoration: BoxDecoration(color: Colors.red)), flex: 1,),
+              Expanded(child: Container(decoration: BoxDecoration(color: Colors.yellow)), flex: 2),
+            ],
+          ),
+          new Positioned(
+            child: new CircleAvatar(
+              radius: avatarRadius,
+              backgroundColor: Colors.green,
+            ),
+            left: (MediaQuery.of(context).size.width/2) - avatarRadius,
+            top: topWidgetHeight - avatarRadius,
+          )
+        ],
+      ),
+    );
+  }
+}
+class MyHomePage extends StatelessWidget {
+  final double avatarRadius = 50.0;
+  @override
+  Widget build(BuildContext context) {
+    var height = MediaQuery.of(context).size.height / 3.8;
+    var width = MediaQuery.of(context).size.width;
+    return new Scaffold(
+      body: new Stack(
+        children: <Widget>[
+          Column(
+            children: <Widget>[
+              Container(height: height, color: Colors.yellow),
+            ],
+          ),
+          Positioned(
+            child: CircleAvatar(radius: avatarRadius, backgroundColor: Colors.green),
+            left: (MediaQuery.of(context).size.width/2) - avatarRadius,
+            top: height - avatarRadius,
+          )
+        ],
       ),
     );
   }
