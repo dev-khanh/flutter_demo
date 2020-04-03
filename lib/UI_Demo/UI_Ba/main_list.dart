@@ -50,10 +50,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen> with TickerProviderSt
                   itemBuilder: (BuildContext context, int index) {
                     final int count = hotelList.length > 10 ? 10 : hotelList.length;
                     final Animation<double> animation = Tween<double>(begin: 0.0, end: 1.0).animate(
-                        CurvedAnimation(
-                            parent: animationController,
-                            curve: Interval((1 / count) * index, 1.0, curve: Curves.fastOutSlowIn)
-                        )
+                        CurvedAnimation(parent: animationController, curve: Interval((1 / count) * index, 1.0, curve: Curves.fastOutSlowIn))
                     );
                     animationController.forward();
                     return HotelListView(callback: () {}, hotelData: hotelList[index], animation: animation, animationController: animationController);
