@@ -6,7 +6,6 @@ import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 class DatabaseHelper {
   static MethodChannel methodChannel = MethodChannel('plugins.flutter.io/devk_path_provider');
-
   static final DatabaseHelper _instance = new DatabaseHelper.internal();
   factory DatabaseHelper() => _instance;
   static Database _db;
@@ -17,8 +16,9 @@ class DatabaseHelper {
   }
   DatabaseHelper.internal();
   initDb() async {
-    
-    String path = join((await methodChannel.invokeMethod('getApplicationDocumentsDirectory')).path, "main.db");
+    var res = await methodChannel.invokeMethod('getApplicationDocumentsDirectory');
+    print(res);
+    String path = join(res, "main.db");
     print('DEVK PATH: $path');
     var theDb = await openDatabase(path, version: 1, onCreate: _onCreate);
     return theDb;

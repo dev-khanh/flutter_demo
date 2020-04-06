@@ -53,7 +53,7 @@ public class MainActivity extends FlutterActivity {
         );
 
         flutterEngine.getPlugins().add(new GPSMudules(getApplicationContext()));
-        flutterEngine.getPlugins().add(new PathProviderPlugin());
+        flutterEngine.getPlugins().add(new PathProviderPlugin(getApplicationContext()));
     }
     private int getBatteryLevel() {
         if (VERSION.SDK_INT >= VERSION_CODES.LOLLIPOP) {
