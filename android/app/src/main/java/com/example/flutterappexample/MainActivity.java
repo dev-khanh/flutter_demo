@@ -7,19 +7,19 @@ import android.os.BatteryManager;
 import android.os.Build.VERSION;
 import android.os.Build.VERSION_CODES;
 import android.util.Log;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
+import gps.GPSMudules;
 import io.flutter.embedding.android.FlutterActivity;
 import io.flutter.embedding.engine.FlutterEngine;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.MethodCall;
+import path.PathProviderPlugin;
+
 public class MainActivity extends FlutterActivity {
     private static final String BATTERY_CHANNEL = "samples.flutter.io/battery";
     private static final String DEVK = "com.example.flutterappexample/devk";
-
     @Override
     public void configureFlutterEngine(@NonNull FlutterEngine flutterEngine) {
         new MethodChannel(flutterEngine.getDartExecutor(), BATTERY_CHANNEL).setMethodCallHandler(
@@ -51,6 +51,9 @@ public class MainActivity extends FlutterActivity {
                 }
             }
         );
+
+        flutterEngine.getPlugins().add(new GPSMudules(getApplicationContext()));
+        flutterEngine.getPlugins().add(new PathProviderPlugin());
     }
     private int getBatteryLevel() {
         if (VERSION.SDK_INT >= VERSION_CODES.LOLLIPOP) {

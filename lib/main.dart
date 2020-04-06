@@ -10,7 +10,6 @@ import 'API_CARD/Screen/detail_page.dart';
 import 'API_CARD/Screen/movie_category.dart';
 import 'API_CARD/Screen/my_list.dart';
 import 'Animation/calculator_animation.dart';
-import 'BadgesWidget/badges_widget.dart';
 import 'BottomNavigationBar/bottomnavigationbars.dart';
 import 'Color/text_color.dart';
 import 'Conect_Java/conect_java.dart';
@@ -24,9 +23,11 @@ import 'LocalStorage/screen_one.dart';
 import 'Login/home.dart';
 import 'Login/login_challenge.dart';
 import 'Login/main_creen.dart';
+import 'Mudules/call_gps.dart';
 import 'Opacity/opacity_demo.dart';
 import 'Redux/MainRedux.dart';
 import 'Redux/redux-simple.dart';
+import 'SQLITE/example_sqlite.dart';
 import 'SharedPreferences/shared_preferences.dart';
 import 'SliverAppBar/collapsing_toolbar.dart';
 import 'UI_Demo/UI_Ba/main_list.dart';
@@ -49,7 +50,7 @@ void main() => runApp(MaterialApp(title: 'Navigation Basics', home: MyApp(),));
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return TestSendImage();
+    return Example_sqlite();
   }
 }
 //SHOW HIDE SETSTATE STATE

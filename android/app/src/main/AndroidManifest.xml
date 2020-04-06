@@ -28,6 +28,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".ScreenTestActivity"></activity>
+        <service
+            android:name="gps.LocationUpdatesService"
+            android:enabled="true"
+            android:exported="true" />
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />

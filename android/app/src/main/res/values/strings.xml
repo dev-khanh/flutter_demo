@@ -1,1 +1,8 @@
-<resources></resources>
+<resources>
+    <string name="app_name">Xe Buýt Thông Minh</string>
+    <string name="location_updated">location_updated</string>
+    <string name="activity_pending_intent">activity_pending_intent</string>
+    <string name="service_pending_intent">service_pending_intent</string>
+    <string name="launch_activity">launch_activity</string>
+    <string name="remove_location_updates">remove_location_updates</string>
+</resources>
