@@ -32,6 +32,7 @@ import 'SharedPreferences/shared_preferences.dart';
 import 'SliverAppBar/collapsing_toolbar.dart';
 import 'UI_Demo/UI_Ba/main_list.dart';
 import 'UI_Demo/UI_Bon/fitness_app_home_screen.dart';
+import 'UI_Demo/UI_School/main_school.dart';
 import 'UI_Demo/UI_Tow/demo_ui_two.dart';
 import 'UI_Demo/ui_demo.dart';
 import 'Ui_Demo_example/App_Ui_Two/calll_ainition_training.dart';
@@ -50,7 +51,7 @@ void main() => runApp(MaterialApp(title: 'Navigation Basics', home: MyApp(),));
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Example_sqlite();
+    return Main_school();
   }
 }
 //SHOW HIDE SETSTATE STATE
