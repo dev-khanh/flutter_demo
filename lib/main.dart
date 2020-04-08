@@ -16,6 +16,7 @@ import 'Conect_Java/conect_java.dart';
 import 'Desiges/desiges_example.dart';
 import 'Desiges/test_send_image.dart';
 import 'Dialog/custom_dialog.dart';
+import 'JSON/main_example.dart';
 import 'LifeCycle/lifecyle_handling_orientation.dart';
 import 'LocalStorage/local_storage.dart';
 import 'LocalStorage/login_local.dart';
@@ -51,7 +52,7 @@ void main() => runApp(MaterialApp(title: 'Navigation Basics', home: MyApp(),));
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Main_school();
+    return MainExample();
   }
 }
 //SHOW HIDE SETSTATE STATE
