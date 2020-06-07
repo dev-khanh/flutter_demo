@@ -15,6 +15,7 @@ import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.MethodCall;
+import io.flutter.plugins.GeneratedPluginRegistrant;
 import path.PathProviderPlugin;
 
 public class MainActivity extends FlutterActivity {
@@ -22,6 +23,7 @@ public class MainActivity extends FlutterActivity {
     private static final String DEVK = "com.example.flutterappexample/devk";
     @Override
     public void configureFlutterEngine(@NonNull FlutterEngine flutterEngine) {
+        GeneratedPluginRegistrant.registerWith(flutterEngine);
         new MethodChannel(flutterEngine.getDartExecutor(), BATTERY_CHANNEL).setMethodCallHandler(
             new MethodCallHandler() {
                 @Override

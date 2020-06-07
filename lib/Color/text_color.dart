@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import 'rainbow_text.dart';
-
 class Text_Color extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
