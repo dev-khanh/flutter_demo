@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutterappexample/UI_Demo/showCard/card_widget.dart';
+
 class HomePage extends StatefulWidget {
   @override
   HomePageState createState() {
     return new HomePageState();
   }
 }
-class HomePageState extends State<HomePage>{
+
+class HomePageState extends State<HomePage> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   final orangeColor = Color(0xFFff9700);
   final orangeLightColor = Color(0xFFffc500);
@@ -79,7 +81,7 @@ class HomePageState extends State<HomePage>{
       ),
       body: Container(
         width: _media.width,
-        height: _media.height,
+        height: _media.height / 2.5,
         child: Stack(
           children: <Widget>[
             Container(
@@ -101,19 +103,20 @@ class HomePageState extends State<HomePage>{
                           foodName: "Cafe De Perks",
                           vote: 4.5,
                           foodTime: "15-30 min",
-                          image: "https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2016/howcuttingdo.jpg",
+                          image:
+                              "https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2016/howcuttingdo.jpg",
                         ),
                       ),
                     ),
                     GestureDetector(
-                      onTap: () {
-                      },
+                      onTap: () {},
                       child: CardListWidget(
                         foodDetail: "Desert - Fast Food - Alcohol",
                         foodName: "Cafe De Istanbul",
                         vote: 4.5,
                         foodTime: "15-60 min",
-                        image: "https://asset2.cxnmarksandspencer.com/is/image/mands/44e79d5a6007d11fd420b6c302d0f2fc0ef404da",
+                        image:
+                            "https://asset2.cxnmarksandspencer.com/is/image/mands/44e79d5a6007d11fd420b6c302d0f2fc0ef404da",
                       ),
                     ),
                   ],

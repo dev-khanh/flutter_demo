@@ -9,7 +9,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
   sqflite: "^0.11.0"
   path_provider: ^1.6.5
   cupertino_icons: ^0.1.2
@@ -43,6 +42,9 @@ dependencies:
   line_icons: ^0.2.0
 # ShowCard
   flutter_advanced_networkimage: 0.7.0
+  provider: ^4.1.3
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
