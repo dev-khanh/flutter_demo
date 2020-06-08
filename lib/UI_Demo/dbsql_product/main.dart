@@ -1,14 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutterappexample/UI_Demo/dbsql_product/bloc/todo_bloc.dart';
 import 'package:provider/provider.dart';
-
 import 'db/todo_database.dart';
 import 'todo/todo_list_container.dart';
-
-//  await TodoDatabase.instanse.init();
-
-
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await TodoDatabase.instanse.init();

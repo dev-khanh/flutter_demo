@@ -1,8 +1,6 @@
 import 'package:flutterappexample/UI_Demo/ui_four/model/movie_detail_model.dart';
 import 'package:rxdart/rxdart.dart';
-
 import 'base.dart';
-
 class MovieDetailBloc extends BaseBloc<Movie_Detail_Model>{
   Observable<Movie_Detail_Model> get movieDetail => fetcher.stream;
   fetchMovieDetail(int movieId) async{

@@ -1,9 +1,6 @@
-
 import 'package:flutterappexample/UI_Demo/ui_four/model/item_model.dart';
 import 'package:rxdart/rxdart.dart';
-
 import 'base.dart';
-
 class MovieListBloc extends BaseBloc<Item_Model>{
   Observable<Item_Model> get movieList => fetcher.stream;
   fetchMovieList(String type) async{
