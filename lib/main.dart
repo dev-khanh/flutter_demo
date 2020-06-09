@@ -1,10 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterappexample/Desiges/new_sceen_get_data.dart';
 import 'package:flutterappexample/screen.dart';
 import 'package:flutterappexample/slider_button/slider_button.dart';
-import 'package:toast/toast.dart';
 import 'API_CARD/Screen/api_card.dart';
 import 'API_CARD/Screen/detail_page.dart';
 import 'API_CARD/Screen/movie_category.dart';
@@ -51,7 +49,7 @@ void main() => runApp(MaterialApp(title: 'Navigation Basics', home: MyApp(),));
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Main_school();
+    return Api_Card();
   }
 }
 //SHOW HIDE SETSTATE STATE
