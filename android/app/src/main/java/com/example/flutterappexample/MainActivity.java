@@ -21,9 +21,7 @@ import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugins.GeneratedPluginRegistrant;
 import path.PathProviderPlugin;
-
 import static com.example.flutterappexample.momo.PaygateModules.paygate;
-
 public class MainActivity extends FlutterActivity {
     private static final String BATTERY_CHANNEL = "samples.flutter.io/battery";
     private static final String DEVK = "com.example.flutterappexample/devk";
