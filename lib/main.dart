@@ -14,9 +14,9 @@ import 'package:flutterappexample/bloc_example/demo_fives/blocfive.dart';
 import 'package:flutterappexample/bloc_example/demo_four/demo_four.dart';
 import 'package:flutterappexample/bloc_example/demo_three/demo_three.dart';
 import 'package:flutterappexample/bloc_example/demo_two/bloc_change.dart';
-import 'file:///C:/Users/dqkhanh/Desktop/flutter_demo/lib/bloc_example/demo_one/my_home_page.dart';
-import 'file:///C:/Users/dqkhanh/Desktop/flutter_demo/lib/bloc_example/demo_one/simple_bloc_delegate.dart';
 import 'package:provider/provider.dart';
+
+import 'demo_mvvm/view/my_home_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,6 +28,6 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: DemoFive());
+    return MaterialApp(home: MyHomePage(title: "DEVK",));
   }
 }
