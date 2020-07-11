@@ -1,5 +1,5 @@
 # flutterappexample
-![Cat](https://raw.githubusercontent.com/{user}/{repo}/assets/cat.png)
+![vongdo](https://github.com/quockha/flutter_demo/blob/master/assets/images/vongdo.PNG)
 A new Flutter application.
 
 ## Getting Started
