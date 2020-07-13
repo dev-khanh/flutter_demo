@@ -8,8 +8,17 @@ class DemoFive extends StatefulWidget {
   State<StatefulWidget> createState() => _StateDemoFives();
 }
 class _StateDemoFives extends State<DemoFive> {
+  BlocFive _bloc = BlocFive();
+  String DEVK = "DEVK: ";
+  @override
+  void dispose(){
+    super.dispose();
+    _bloc.dispose();
+    print(DEVK+"dispose");
+  }
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: ProviderBlocFive(
         child: Center(
@@ -20,6 +29,7 @@ class _StateDemoFives extends State<DemoFive> {
   }
 }
 class Login extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     final bloc = ProviderBlocFive.of(context);
@@ -72,7 +82,7 @@ class Login extends StatelessWidget {
     stream: bloc.submitValid,
     builder: (context, snap) {
       return RaisedButton(
-        onPressed: (!snap.hasData) ? null : bloc.setOnClickButton,
+        onPressed:() => snap.hasData ? bloc.setOnClickButton(context) : null,
         child: Text('Login', style: TextStyle(color: Colors.white),),
         color: Colors.blue,
       );
