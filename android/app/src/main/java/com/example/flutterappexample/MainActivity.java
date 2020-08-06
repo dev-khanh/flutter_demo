@@ -1,17 +1,23 @@
 package com.example.flutterappexample;
-
 import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.BatteryManager;
 import android.os.Build.VERSION;
 import android.os.Build.VERSION_CODES;
+import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.util.Log;
 import androidx.annotation.NonNull;
+<<<<<<< HEAD
+import androidx.annotation.Nullable;
+
+=======
 import com.example.flutterappexample.momo.AppMoMoLib;
 import com.example.flutterappexample.momo.MoMoParameterNamePayment;
 import java.util.HashMap;
 import java.util.Map;
+>>>>>>> 0f1357deffcc4ba8e9fe17fadf449574835f14b6
 import gps.GPSMudules;
 import io.flutter.embedding.android.FlutterActivity;
 import io.flutter.embedding.engine.FlutterEngine;
@@ -21,12 +27,31 @@ import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugins.GeneratedPluginRegistrant;
 import path.PathProviderPlugin;
+<<<<<<< HEAD
+
+
+
+
+
+
+
+public class MainActivity extends FlutterActivity {
+    private static final String BATTERY_CHANNEL = "samples.flutter.io/battery";
+    private static final String DEVK = "com.example.flutterappexample/devk";
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
+        super.onCreate(savedInstanceState, persistentState);
+    }
+
+=======
 import static com.example.flutterappexample.momo.PaygateModules.paygate;
 public class MainActivity extends FlutterActivity {
     private static final String BATTERY_CHANNEL = "samples.flutter.io/battery";
     private static final String DEVK = "com.example.flutterappexample/devk";
     private static final String momo = "com.example.flutterappexample/MomoPlugin";
     MethodChannel.Result token;
+>>>>>>> 0f1357deffcc4ba8e9fe17fadf449574835f14b6
     @Override
     public void configureFlutterEngine(@NonNull FlutterEngine flutterEngine) {
         GeneratedPluginRegistrant.registerWith(flutterEngine);
