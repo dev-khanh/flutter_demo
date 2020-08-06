@@ -1,6 +1,5 @@
 # flutterappexample
-
-A new Flutter application.
+![vongdo](https://github.com/quockha/flutter_demo/blob/master/assets/images/vongdo.PNG)
 
 ## Getting Started
 

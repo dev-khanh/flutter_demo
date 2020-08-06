@@ -9,8 +9,15 @@ import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.util.Log;
 import androidx.annotation.NonNull;
+<<<<<<< HEAD
 import androidx.annotation.Nullable;
 
+=======
+import com.example.flutterappexample.momo.AppMoMoLib;
+import com.example.flutterappexample.momo.MoMoParameterNamePayment;
+import java.util.HashMap;
+import java.util.Map;
+>>>>>>> 0f1357deffcc4ba8e9fe17fadf449574835f14b6
 import gps.GPSMudules;
 import io.flutter.embedding.android.FlutterActivity;
 import io.flutter.embedding.engine.FlutterEngine;
@@ -20,6 +27,7 @@ import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugins.GeneratedPluginRegistrant;
 import path.PathProviderPlugin;
+<<<<<<< HEAD
 
 
 
@@ -36,6 +44,14 @@ public class MainActivity extends FlutterActivity {
         super.onCreate(savedInstanceState, persistentState);
     }
 
+=======
+import static com.example.flutterappexample.momo.PaygateModules.paygate;
+public class MainActivity extends FlutterActivity {
+    private static final String BATTERY_CHANNEL = "samples.flutter.io/battery";
+    private static final String DEVK = "com.example.flutterappexample/devk";
+    private static final String momo = "com.example.flutterappexample/MomoPlugin";
+    MethodChannel.Result token;
+>>>>>>> 0f1357deffcc4ba8e9fe17fadf449574835f14b6
     @Override
     public void configureFlutterEngine(@NonNull FlutterEngine flutterEngine) {
         GeneratedPluginRegistrant.registerWith(flutterEngine);
@@ -69,6 +85,35 @@ public class MainActivity extends FlutterActivity {
             }
         );
 
+        new MethodChannel(flutterEngine.getDartExecutor(), momo).setMethodCallHandler(
+                new MethodChannel.MethodCallHandler() {
+                    @Override
+                    public void onMethodCall(MethodCall call, MethodChannel.Result result) {
+                        final String partnerRefId = call.argument("partnerRefId");
+                        final String partnerTransId = call.argument("partnerTransId");
+                        final String amount = call.argument("amount");
+                        final String description = call.argument("description");
+                        switch (call.method) {
+                            case "hashRSA":
+                                AppMoMoLib.getInstance().setEnvironment(AppMoMoLib.ENVIRONMENT.DEVELOPMENT);
+                                String hashRSA = paygate(partnerRefId, partnerTransId, Long.parseLong(amount), description, MoMoParameterNamePayment.publickeyMoMo);
+                                result.success(hashRSA);
+                                break;
+                            case "Start":
+                                AppMoMoLib.getInstance().setEnvironment(AppMoMoLib.ENVIRONMENT.DEVELOPMENT);
+                                requestPayment(Long.parseLong(amount), description);
+                                token = result;
+                                break;
+                            default:
+                                result.notImplemented();
+                                break;
+                        }
+                    }
+                }
+        );
+
+
+
         flutterEngine.getPlugins().add(new GPSMudules(getApplicationContext()));
         flutterEngine.getPlugins().add(new PathProviderPlugin(getApplicationContext()));
     }
@@ -80,6 +125,47 @@ public class MainActivity extends FlutterActivity {
         } else {
             Intent intent = new ContextWrapper(getApplicationContext()).registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
             return (intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1) * 100) / intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
+        }
+    }
+    private void requestPayment(long amount, String descripion) {
+        AppMoMoLib.getInstance().setAction(AppMoMoLib.ACTION.PAYMENT);
+        AppMoMoLib.getInstance().setActionType(AppMoMoLib.ACTION_TYPE.GET_TOKEN);
+        Map<String, Object> eventValue = new HashMap<>();
+        eventValue.put(MoMoParameterNamePayment.ACTION, MoMoParameterNamePayment.GETTOKEN);
+        eventValue.put(MoMoParameterNamePayment.PARTNER, MoMoParameterNamePayment.MERCHANT);
+        eventValue.put(MoMoParameterNamePayment.APPSCHEME, MoMoParameterNamePayment.MMOSIJI);
+        eventValue.put(MoMoParameterNamePayment.AMOUNT, amount);
+        eventValue.put(MoMoParameterNamePayment.DESCRIPTION, descripion);
+        eventValue.put(MoMoParameterNamePayment.MERCHANT_CODE, MoMoParameterNamePayment.MOMOISJ_NAME);
+        eventValue.put(MoMoParameterNamePayment.MERCHANT_NAME, MoMoParameterNamePayment.NAMECOTY);
+        AppMoMoLib.getInstance().requestMoMoCallBack(this, eventValue);
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == AppMoMoLib.getInstance().REQUEST_CODE_MOMO && resultCode == -1) {
+            if(data != null) {
+                if(data.getIntExtra("status", -1) == 0) {
+                    Log.e("DEVK", "message: " + "Get token " + data.getStringExtra("message"));
+                    if(data.getStringExtra("data") != null && !data.getStringExtra("data").equals("")) {
+//                        Log.d("DEVK", data.getStringExtra("data"));
+                        token.success(data.getStringExtra("data"));
+                    } else {
+                        Log.e("DEVK", "message: " + "Không nhận được thông tin");
+                    }
+                } else if(data.getIntExtra("status", -1) == 1) {
+                    String message = data.getStringExtra("message") != null?data.getStringExtra("message"):"Thất bại";
+                    Log.d("DEVK", "message: " + message);
+                } else if(data.getIntExtra("status", -1) == 2) {
+                    Log.e("DEVK","message: " + "Không nhận được thông tin");
+                } else {
+                    Log.d("DEVK", "message: " + "Không nhận được thông tin");
+                }
+            } else {
+                Log.e("DEVK", "message: " + "Không nhận được thông tin");
+            }
+        } else {
+            Log.d("DEVK", "message: " + "Không gởi được yêu cầu vui lòng kiểm tra lại");
         }
     }
 }
