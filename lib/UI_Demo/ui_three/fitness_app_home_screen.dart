@@ -28,7 +28,7 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
     tabIconsList[0].isSelected = true;
 
     animationController = AnimationController(
-        duration: const Duration(milliseconds: 600), vsync: this);
+        duration: const Duration(milliseconds: 600), value: this);
     tabBody = MyDiaryScreen(animationController: animationController);
     super.initState();
   }

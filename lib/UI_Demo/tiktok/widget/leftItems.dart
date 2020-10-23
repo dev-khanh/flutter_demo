@@ -24,7 +24,7 @@ class _LeftItemsState extends State<LeftItems>
     super.initState();
     _controller = AnimationController(
       duration: const Duration(seconds: 3),
-      vsync: this,
+      value: this,
     )..repeat();
     _offsetAnimation = Tween<Offset>(
       begin: Offset.zero,

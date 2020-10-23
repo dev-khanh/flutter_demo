@@ -383,11 +383,13 @@ class MediterranesnDietView extends StatelessWidget {
                                           width: ((70 / 1.2) * animation.value),
                                           height: 4,
                                           decoration: BoxDecoration(
-                                            gradient: LinearGradient(colors: [
-                                              HexColor('#87A0E5'),
-                                              HexColor('#87A0E5')
-                                                  .withOpacity(0.5),
-                                            ]),
+                                            gradient: LinearGradient(
+                                              //   colors: [
+                                              // HexColor('#87A0E5'),
+                                              // HexColor('#87A0E5')
+                                              //     .withOpacity(0.5),
+                                              // ]
+                                            ),
                                             borderRadius: BorderRadius.all(
                                                 Radius.circular(4.0)),
                                           ),
@@ -452,11 +454,13 @@ class MediterranesnDietView extends StatelessWidget {
                                               height: 4,
                                               decoration: BoxDecoration(
                                                 gradient:
-                                                    LinearGradient(colors: [
-                                                  HexColor('#F56E98')
-                                                      .withOpacity(0.1),
-                                                  HexColor('#F56E98'),
-                                                ]),
+                                                    LinearGradient(
+                                                //         colors: [
+                                                //   HexColor('#F56E98')
+                                                //       .withOpacity(0.1),
+                                                //   HexColor('#F56E98'),
+                                                // ]
+                                                    ),
                                                 borderRadius: BorderRadius.all(
                                                     Radius.circular(4.0)),
                                               ),
@@ -523,11 +527,13 @@ class MediterranesnDietView extends StatelessWidget {
                                               height: 4,
                                               decoration: BoxDecoration(
                                                 gradient:
-                                                    LinearGradient(colors: [
-                                                  HexColor('#F1B440')
-                                                      .withOpacity(0.1),
-                                                  HexColor('#F1B440'),
-                                                ]),
+                                                    LinearGradient(
+                                                //         colors: [
+                                                //   HexColor('#F1B440')
+                                                //       .withOpacity(0.1),
+                                                //   HexColor('#F1B440'),
+                                                // ]
+                                                    ),
                                                 borderRadius: BorderRadius.all(
                                                     Radius.circular(4.0)),
                                               ),
@@ -630,8 +636,8 @@ class CurvePainter extends CustomPainter {
     final gradient = new SweepGradient(
       startAngle: degreeToRadians(268),
       endAngle: degreeToRadians(270.0 + 360),
-      tileMode: TileMode.repeated,
-      colors: colorsList,
+      // tileMode: TileMode.repeated,
+      // colors: colorsList,
     );
     final paint = new Paint()
       ..shader = gradient.createShader(rect)
@@ -649,8 +655,8 @@ class CurvePainter extends CustomPainter {
         paint);
 
     final gradient1 = new SweepGradient(
-      tileMode: TileMode.repeated,
-      colors: [Colors.white, Colors.white],
+      // tileMode: TileMode.repeated,
+      // colors: [Colors.white, Colors.white],
     );
 
     var cPaint = new Paint();

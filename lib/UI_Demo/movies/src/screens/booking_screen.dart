@@ -23,7 +23,7 @@ class _BookingScreenState extends State<BookingScreen> with TickerProviderStateM
   void initState() {
     super.initState();
     animationController = AnimationController(
-      vsync: this,
+      value: this,
       duration: const Duration(milliseconds: 600)
     );
     positionAnimation = Tween(begin: startPosition, end: endPosition)
@@ -106,11 +106,11 @@ class _BookingScreenState extends State<BookingScreen> with TickerProviderStateM
                 return LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
-                  colors: [
-                    const Color(0x20FFFFFF),
-                    Colors.white
-                  ],
-                  stops: [0.0, colorAnimation.value.toDouble()]
+                  // colors: [
+                  //   const Color(0x20FFFFFF),
+                  //   Colors.white
+                  // ],
+                  // stops: [0.0, colorAnimation.value.toDouble()]
                 ).createShader(bounds);
               },
               blendMode: BlendMode.srcATop,

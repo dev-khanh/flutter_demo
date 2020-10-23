@@ -21,8 +21,8 @@ class _WaveViewState extends State<WaveView> with TickerProviderStateMixin {
 
   @override
   void initState() {
-    animationController = AnimationController(duration: Duration(milliseconds: 2000), vsync: this);
-    waveAnimationController = AnimationController(duration: Duration(milliseconds: 2000), vsync: this);
+    animationController = AnimationController(duration: Duration(milliseconds: 2000), value: this);
+    waveAnimationController = AnimationController(duration: Duration(milliseconds: 2000), value: this);
     animationController
       ..addStatusListener((status) {
         if (status == AnimationStatus.completed) {
@@ -84,7 +84,7 @@ class _WaveViewState extends State<WaveView> with TickerProviderStateMixin {
                       bottomRight: Radius.circular(80.0),
                       topRight: Radius.circular(80.0)),
                   gradient: LinearGradient(
-                    colors: [FintnessAppTheme.nearlyDarkBlue.withOpacity(0.2), FintnessAppTheme.nearlyDarkBlue.withOpacity(0.5)],
+                    // colors: [FintnessAppTheme.nearlyDarkBlue.withOpacity(0.2), FintnessAppTheme.nearlyDarkBlue.withOpacity(0.5)],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                   ),
@@ -97,7 +97,7 @@ class _WaveViewState extends State<WaveView> with TickerProviderStateMixin {
                 decoration: BoxDecoration(
                   color: FintnessAppTheme.nearlyDarkBlue,
                   gradient: LinearGradient(
-                    colors: [FintnessAppTheme.nearlyDarkBlue.withOpacity(0.4), FintnessAppTheme.nearlyDarkBlue],
+                    // colors: [FintnessAppTheme.nearlyDarkBlue.withOpacity(0.4), FintnessAppTheme.nearlyDarkBlue],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                   ),

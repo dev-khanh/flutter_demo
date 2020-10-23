@@ -200,11 +200,12 @@ class SignInButtonWidget extends StatelessWidget {
           ),
         ],
         gradient: new LinearGradient(
-            colors: [Color(0xFFf7418c), Color(0xFFfbab66)],
+            // colors: [Color(0xFFf7418c), Color(0xFFfbab66)],
             begin: const FractionalOffset(0.2, 0.2),
             end: const FractionalOffset(1.0, 1.0),
-            stops: [0.0, 1.0],
-            tileMode: TileMode.clamp),
+            // stops: [0.0, 1.0],
+            // tileMode: TileMode.clamp
+        ),
       ),
       child: MaterialButton(
           highlightColor: Colors.transparent,
@@ -240,14 +241,15 @@ class FacebookGoogleLogin extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   gradient: new LinearGradient(
-                      colors: [
-                        Colors.black12,
-                        Colors.black54,
-                      ],
+                      // colors: [
+                      //   Colors.black12,
+                      //   Colors.black54,
+                      // ],
                       begin: const FractionalOffset(0.0, 0.0),
                       end: const FractionalOffset(1.0, 1.0),
-                      stops: [0.0, 1.0],
-                      tileMode: TileMode.clamp),
+                      // stops: [0.0, 1.0],
+                      // tileMode: TileMode.clamp
+                  ),
                 ),
                 width: 100.0,
                 height: 1.0,
@@ -265,14 +267,15 @@ class FacebookGoogleLogin extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   gradient: new LinearGradient(
-                      colors: [
-                        Colors.black54,
-                        Colors.black12,
-                      ],
+                      // colors: [
+                      //   Colors.black54,
+                      //   Colors.black12,
+                      // ],
                       begin: const FractionalOffset(0.0, 0.0),
                       end: const FractionalOffset(1.0, 1.0),
-                      stops: [0.0, 1.0],
-                      tileMode: TileMode.clamp),
+                      // stops: [0.0, 1.0],
+                      // tileMode: TileMode.clamp
+                    ),
                 ),
                 width: 100.0,
                 height: 1.0,

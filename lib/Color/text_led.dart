@@ -17,7 +17,7 @@ class _HomePageState extends State<TextLed> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     animation = AnimationController(
-      vsync: this,
+      value: this,
       duration: Duration(milliseconds: 200),
     );
     _fadeInFadeOut = Tween<double>(begin: 1.0, end: 0.2).animate(animation);

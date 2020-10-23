@@ -85,10 +85,10 @@ class CardListWidgetState extends State<CardListWidget> {
                         padding: EdgeInsets.only(left: 10),
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
-                            colors: [
-                              Colors.transparent,
-                              Colors.black87,
-                            ],
+                            // colors: [
+                            //   Colors.transparent,
+                            //   Colors.black87,
+                            // ],
                             begin: Alignment.topCenter,
                             end: Alignment.bottomCenter,
                           ),

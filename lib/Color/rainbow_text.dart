@@ -24,7 +24,7 @@ class _RainbowTextState extends State<RainbowText>
   void initState() {
     super.initState();
     _animationController = AnimationController(
-        duration: Duration(milliseconds: 1000), vsync: this);
+        duration: Duration(milliseconds: 1000), value: this);
     if (widget.loop) {
       _animationController.forward();
       _animationController.addStatusListener((status) {
@@ -75,8 +75,9 @@ class _RainbowTextState extends State<RainbowText>
           Shader shader = LinearGradient(
               begin: Alignment.centerLeft,
               end: Alignment.centerRight,
-              colors: widget.colors,
-              tileMode: TileMode.repeated)
+              // colors: widget.colors,
+              // tileMode: TileMode.repeated,
+          )
               .createShader(Rect.fromLTWH(
               _animationController.value * width, 0, width, 0));
           var foreground = Paint();

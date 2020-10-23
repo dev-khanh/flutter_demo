@@ -22,7 +22,7 @@ class _MealsListViewState extends State<MealsListView>
   @override
   void initState() {
     animationController = AnimationController(
-        duration: const Duration(milliseconds: 2000), vsync: this);
+        duration: const Duration(milliseconds: 2000), value: this);
     super.initState();
   }
 
@@ -117,10 +117,10 @@ class MealsView extends StatelessWidget {
                               blurRadius: 8.0),
                         ],
                         gradient: LinearGradient(
-                          colors: <HexColor>[
-                            HexColor(mealsListData.startColor),
-                            HexColor(mealsListData.endColor),
-                          ],
+                          // colors: <HexColor>[
+                          //   HexColor(mealsListData.startColor),
+                          //   HexColor(mealsListData.endColor),
+                          // ],
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
                         ),

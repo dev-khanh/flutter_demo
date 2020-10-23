@@ -36,10 +36,10 @@ class _LoginPageState extends State<LoginPage> {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [
-              Color(0xFFf45d27),
-              Color(0xFFf5851f)
-            ]
+            // colors: [
+            //   Color(0xFFf45d27),
+            //   Color(0xFFf5851f)
+            // ]
           ),
           borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30))
         ),

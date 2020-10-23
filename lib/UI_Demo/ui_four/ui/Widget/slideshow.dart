@@ -71,13 +71,13 @@ class _SlideShowViewState extends State<SlideShowView> {
                 gradient: LinearGradient(
                   begin: Alignment.topRight,
                   end: Alignment.bottomLeft,
-                  stops: [0.1, 0.5, 0.7, 0.9],
-                  colors: [
-                    Color(0x00000000),
-                    Color(0x00000000),
-                    Color(0x22000000),
-                    Color(0x66000000),
-                  ],
+                  // stops: [0.1, 0.5, 0.7, 0.9],
+                  // colors: [
+                  //   Color(0x00000000),
+                  //   Color(0x00000000),
+                  //   Color(0x22000000),
+                  //   Color(0x66000000),
+                  // ],
                 ),),
               child: Padding(
                 padding: const EdgeInsets.all(15.0),

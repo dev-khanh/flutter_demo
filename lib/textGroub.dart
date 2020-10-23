@@ -98,7 +98,7 @@ class _MyHomePageState extends State<TextGroub> with SingleTickerProviderStateMi
     super.initState();
     _controller = AnimationController(
         duration: Duration(milliseconds: 100),
-        vsync: this
+        value: this
     );
     _animation = CurvedAnimation(
         parent: _controller,
@@ -207,7 +207,7 @@ class _CustomRadioState<T, U> extends State<CustomRadio<T, U>>
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(duration: widget.duration, vsync: this);
+    _controller = AnimationController(duration: widget.duration, value: this);
     _animations = widget.animsBuilder(_controller);
     _animations.forEach((anim) => anim.addListener(() => setState(() {})));
     if (widget.checked)

@@ -1,10 +1,10 @@
-import 'package:bloc_demo/CouterString.dart';
-import 'package:bloc_demo/simple_bloc_observer.dart';
-import 'package:bloc_demo/theme_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
+import 'CouterString.dart';
 import 'counter_bloc.dart';
+import 'simple_bloc_observer.dart';
+import 'theme_cubit.dart';
 void main() {
   Bloc.observer = SimpleBlocObserver();
   runApp(

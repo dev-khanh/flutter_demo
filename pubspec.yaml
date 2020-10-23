@@ -51,12 +51,14 @@ dependencies:
   dartin: ^0.1.5
 #  Noticafition
   onesignal_flutter: ^2.5.0
-  flutter_bloc: ^4.0.1
+#  flutter_bloc: ^4.0.1
   connectivity: ^0.3.2
 
 
-#  flutter_bloc: ^6.0.5
+  flutter_bloc: ^6.0.5
   
+dependency_overrides:
+  flutter_svg: ^0.19.1
 
 dev_dependencies:
   flutter_test:

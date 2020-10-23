@@ -41,11 +41,11 @@ class MovieDetails extends StatelessWidget {
                         return LinearGradient(
                           begin: Alignment.topCenter,
                           end: Alignment.bottomCenter,
-                          colors: [
-                            const Color(0x20FFFFFF),
-                            Colors.white
-                          ],
-                          stops: [0.0, 0.85]
+                          // colors: [
+                          //   const Color(0x20FFFFFF),
+                          //   Colors.white
+                          // ],
+                          // stops: [0.0, 0.85]
                         ).createShader(bounds);
                       },
                       blendMode: BlendMode.srcATop,

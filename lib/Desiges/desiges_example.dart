@@ -226,10 +226,10 @@ class Desiges_example extends StatelessWidget{
       width: 200,
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: const [
-            Colors.red,
-            Colors.blue,
-          ],
+          // colors: const [
+          //   Colors.red,
+          //   Colors.blue,
+          // ],
         ),
       ),
     ),
@@ -244,14 +244,14 @@ class Desiges_example extends StatelessWidget{
       width: 200,
       decoration: BoxDecoration(
         gradient: SweepGradient(
-          colors: const [
-            Colors.blue,
-            Colors.green,
-            Colors.yellow,
-            Colors.red,
-            Colors.blue,
-          ],
-          stops: const [0.0, 0.25, 0.5, 0.75, 1.0],
+          // colors: const [
+          //   Colors.blue,
+          //   Colors.green,
+          //   Colors.yellow,
+          //   Colors.red,
+          //   Colors.blue,
+          // ],
+          // stops: const [0.0, 0.25, 0.5, 0.75, 1.0],
         ),
       ),
     ),

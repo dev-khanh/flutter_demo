@@ -20,7 +20,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen> with TickerProviderSt
   DateTime endDate = DateTime.now().add(const Duration(days: 5));
   @override
   void initState() {
-    animationController = AnimationController(duration: const Duration(milliseconds: 1000), vsync: this);
+    animationController = AnimationController(duration: const Duration(milliseconds: 1000), value: this);
     super.initState();
   }
   Future<bool> getData() async {

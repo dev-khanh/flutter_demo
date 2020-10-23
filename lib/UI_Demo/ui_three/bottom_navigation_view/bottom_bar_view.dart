@@ -22,7 +22,7 @@ class _BottomBarViewState extends State<BottomBarView>
   @override
   void initState() {
     animationController = AnimationController(
-      vsync: this,
+      value: this,
       duration: const Duration(milliseconds: 1000),
     );
     animationController.forward();
@@ -140,10 +140,10 @@ class _BottomBarViewState extends State<BottomBarView>
                       decoration: BoxDecoration(
                         color: FintnessAppTheme.nearlyDarkBlue,
                         gradient: LinearGradient(
-                            colors: [
-                              FintnessAppTheme.nearlyDarkBlue,
-                              HexColor('#6A88E5'),
-                            ],
+                            // colors: [
+                            //   FintnessAppTheme.nearlyDarkBlue,
+                            //   HexColor('#6A88E5'),
+                            // ],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight),
                         shape: BoxShape.circle,
@@ -209,7 +209,7 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
   @override
   void initState() {
     widget.tabIconData.animationController = AnimationController(
-      vsync: this,
+      value: this,
       duration: const Duration(milliseconds: 400),
     )..addStatusListener((AnimationStatus status) {
         if (status == AnimationStatus.completed) {
